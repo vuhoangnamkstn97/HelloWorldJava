@@ -81,7 +81,7 @@ public class HelloWorldServer {
     static class TestServiceImpl extends TestServiceGrpc.TestServiceImplBase {
         @Override
         public void sendInfo(Information req, StreamObserver<ClubMessage> responseObserver) {
-            ClubMessage reply = ClubMessage.newBuilder().setMessage( req.getPlayerName()+ " number " + req.getPlayerNumber() + " play for "+ req.getPlayerClub()).build();
+            ClubMessage reply = ClubMessage.newBuilder().setMessage( req.getPlayerName()+ " number " + req.getPlayerNumber() + " play for "+ req.getPlayerClub()+"...").build();
             responseObserver.onNext(reply);
             responseObserver.onCompleted();
         }
