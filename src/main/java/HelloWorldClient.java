@@ -97,13 +97,14 @@ public class HelloWorldClient {
                 .build();
         try {
             HelloWorldClient client = new HelloWorldClient(channel);
-            String[] players = new String[5];
+            String[] players = new String[6];
             players[0] = "Pogba";
             players[1] = "Martial";
             players[2] = "RashFord";
             players[3] = "Degea";
             players[4] = "Bruno";
-            for ( int i = 0; i < 5 ; i++)
+            players[5] = "Mason Greenwood";
+            for ( int i = 0; i < 6 ; i++)
             {
                 client.greet(players[i],"Manchester United",i );
                 sleep(1000);
